@@ -1,0 +1,75 @@
+
+body{
+    background-image:url(https://unsplash.com/?photo=6liebVeAfrY);
+    background-size: cover;
+    background-position: center;
+    
+}
+html{
+    height: 100%;
+}
+.content{
+    text-align: center;
+    padding-top: 15%;
+
+}
+h3{
+    font-family:'LuckiestGuy';
+    color: black;
+    font-size: bold ;
+    font-size: 3em;
+}
+h5{
+    color: whitesmoke;
+    font-style: italic;
+    font-family: Lobster;
+    font-size: 2em;
+}
+hr{
+
+    width: 400px;
+    color: aqua;}
+
+
+
+.navbar-inverse .navbar-nav>li>a{
+    color: white;
+    
+}
+.navbar-inverse .navbar-brand{
+    color: white;
+}
+
+#dr{
+    padding-top: 7%;
+}
+#dr1{
+    padding-left: 4px;
+    padding-top: 9%;
+}
+
+#jumbo{
+    padding-top: 7%;
+    
+}
+.pa{
+    color: darkblue;
+}
+#btt{
+    text-align: center;
+    
+}
+.act{
+    height: 510px;
+}
+
+#rate{
+    padding-left: 50px;
+    margin-left: 10px;
+}
+
+
+
+
+
+

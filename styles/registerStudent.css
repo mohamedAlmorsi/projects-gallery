@@ -1,0 +1,57 @@
+body{
+    background-image:url(https://scontent-fra3-1.xx.fbcdn.net/v/t1.0-9/13177673_499085110284727_3931195547943229732_n.jpg?oh=f5b25a115e0ac09e34644737be0f20dc&oe=593FCEEC);
+    background-size: cover;
+    background-position: center;
+    
+}
+html{
+    height: 100%;
+}
+
+.info{
+    width: 800px;
+    padding-top: 2%;
+    text-align: center;
+    padding-left: 18%;
+}
+.inputs{
+    padding-left: 40%;
+}
+#btt{
+    text-align: center;
+    width: 100px;
+    
+}
+#dr{
+    padding-top: 7%;
+}
+#dr1{
+    padding-left: 4px;
+    padding-top: 9%;
+}
+
+hr{
+
+    width: 400px;
+    color: aqua;}
+
+#err{
+    visibility: hidden;
+    margin-top: 10px;
+    margin-left: 220px;
+    text-align: center;
+}
+#suc{
+    width: 400px;
+    visibility: hidden;
+    margin-top: 10px;
+    margin-left: -20px;
+    text-align: center;
+}
+
+
+
+
+
+
+

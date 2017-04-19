@@ -1,0 +1,181 @@
+<html>
+<head>
+    <link href='//fonts.googleapis.com/css?family=Kavoon' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="/favicon.ico" type="image/x-icon" rel="icon" />
+    
+
+<style>
+    
+    
+    body{
+    background-image:url(https://scontent-fra3-1.xx.fbcdn.net/v/t1.0-9/13177673_499085110284727_3931195547943229732_n.jpg?oh=f5b25a115e0ac09e34644737be0f20dc&oe=593FCEEC);
+    background-size: cover;
+    background-position: center;
+    
+}
+html{
+    height: 100%;
+}
+
+.info{
+    width: 800px;
+    padding-top: 2%;
+    text-align: center;
+    padding-left: 18%;
+}
+.inputs{
+    padding-left: 40%;
+}
+#btt{
+    text-align: center;
+    width: 100px;
+    
+}
+#dr{
+    padding-top: 7%;
+}
+#dr1{
+    padding-left: 4px;
+    padding-top: 9%;
+}
+
+hr{
+
+    width: 400px;
+    color: aqua;}
+
+#err{
+    width :400 px;
+    visibility: hidden;
+    margin-top: 10px;
+    margin-left: 220px;
+    text-align: center;
+}
+#suc{
+    width: 400px;
+    visibility: hidden;
+    margin-top: 10px;
+    margin-left: -20px;
+    text-align: center;
+}
+
+
+
+    </style>    
+    <title>
+    MET/ BI Porftfolio
+    </title>
+    <body>
+        
+        <nav class="navbar navbar-inverse">
+         <div class="container">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand active "   href="#">MET Portfolio  </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="./home">Home </a></li>
+        <li><a href="./about">About</a></li>
+        
+      </ul>
+      <form class="navbar-form navbar-left">
+        
+      </form>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+              </div>
+</nav>
+        
+  <div class= "info">
+        <h3> Upload Your profile Picture on imgur.com and post its link </h3>
+     <div class ="inputs"> 
+         <div id="suc" class="alert alert-success" role="alert">...</div>
+
+                         <form class="form" method="post" action="/studentSignUp">
+                                             <div class="form-group">
+
+          <input name="fname" type="text" placeholder="First Name (Required)" class="form-control"required >
+       <br>
+       <input name="lname" type="text" placeholder="Last Name (Required)" class="form-control" >
+       <br> 
+   <div class="input-group">
+      
+  <input name = "mail" type="text" class="form-control" placeholder="GUC Mail (Required)"  class="form-control"required>
+ <!-- <span class="input-group-addon" id="basic-addon2">@student.guc.edu.eg</span>-->
+</div>     
+  
+       <br> 
+       
+  <input type="password" name="pass" placeholder="Password (Required)" class="form-control"required >
+      <br>
+  <input type="password" name="passconf"placeholder="Confirm your Password (Required)" class="form-control" required>
+   
+      <br>
+      <input name="profilePicture" type="text" placeholder="Profile Picture (Required)" class="form-control"required >
+       <br> 
+      
+      <button id="btt" type="submit"  class="btn btn-success">Register</button>
+      </div>
+      </form>
+      
+ <div id="err" class="alert alert-danger" role="alert">...</div>
+
+
+
+     </div>  
+        </div>
+    </body>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        
+$(document).ready ( function () {
+    $(document).on ("click", "#btt", function () {
+    $("#err").css("visibility","hidden");
+    $("#suc").css("visibility","hidden");
+         if($("#pass").val()!= $("#passconf").val()){
+        $("#err").text("Passwords Do Not Match");
+        $("#err").css("visibility","visible");
+       // $("#err").css("color","red");
+    }
+        
+   else if(($("#fname").val().length==0 )||
+        ($("#lname").val().length==0) ||
+        ($("#mail").val().length==0 )||
+        ($("#pass").val().length==0)  ||
+        ($("#passconf").val().length==0))
+{
+    $("#err").text("Missing Field (s)");
+        $("#err").css("visibility","visible");
+       // $("#err").css("color","red");
+} 
+        else{
+            $("#suc").text("You've Registered Successfully , Now you Can Login");
+            $("#suc").css("visibility","visible");
+      //  $("#err").css("color","red");
+        }
+      
+    });
+});
+
+
+
+    </script>
+    </head>
+</html>
